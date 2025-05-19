@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: security6
+  data:
+    redis:
+      database: 0
+      password: 123456
+      host: 192.168.58.134
+      connect-timeout: 5s
+
+      lettuce:
+        pool:
+          min-idle: 0
+          max-idle: 8
+          max-active: 8
+          max-wait: -1ms
+  datasource:
+    password: mysql!docker@alice&3308
+    username: alice
+    url: jdbc:mysql://192.168.58.134:3308/security_test_db?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8080
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+custom:
+  jwt:
+    key: Ufxi9YkUdD81g0bb6C7DRqgHDwGo8lgzKZND8vsS3AE=
+    period-of-validity: 604800000
+  root:
+    email: scan.scenery.root@gmail.com
+    password: A7#tLp9!Wx
